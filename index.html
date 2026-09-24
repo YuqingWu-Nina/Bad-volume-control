@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bad Volume Control</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="top-bar">
+        <div>
+          <p class="eyebrow">AN UNNECESSARILY DIFFICULT AUDIO INTERFACE</p>
+          <h1>Catch the Volume People</h1>
+        </div>
+        <section class="volume-panel" aria-live="polite">
+          <span class="volume-label">CURRENT VOLUME</span>
+          <strong id="volume-display">50%</strong>
+          <button id="sound-button" type="button">Play test sound</button>
+        </section>
+      </header>
+
+      <section class="instructions" aria-live="polite">
+        <p id="hint">Find the number you want.</p>
+        <p class="small-text">Then drag that person into the speaker basket.</p>
+      </section>
+
+      <!-- This is the play area where the numbered people walk around. -->
+      <section id="playground" aria-label="Play area full of volume people">
+        <div class="floor-shadow"></div>
+
+        <!-- Dropping a person here changes the volume. -->
+        <div id="basket" aria-label="Speaker basket: drop a volume person here">
+          <div class="basket-handle"></div>
+          <div class="basket-body">
+            <span class="speaker-icon">🔊</span>
+            <span class="basket-text">VOLUME<br />BASKET</span>
+          </div>
+          <div id="captured-person" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <footer>
+        <p>There is no slider. There are only tiny people.</p>
+      </footer>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
